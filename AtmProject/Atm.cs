@@ -135,7 +135,14 @@ namespace Lab02_UnitTesting
         /// <param name="newBalance"></param>
         public static void UpdateBalance(decimal newBalance)
         {
-            Balance = newBalance;
+            if(newBalance >= 0)
+            {
+                Balance = newBalance;
+            }
+            else
+            {
+                throw new Exception("Invalid new balance");
+            }
         }
     }
 }
