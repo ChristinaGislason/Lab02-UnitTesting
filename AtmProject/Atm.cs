@@ -26,7 +26,17 @@ namespace Lab02_UnitTesting
                 Console.WriteLine("2. Deposit");
                 Console.WriteLine("3. Withdraw");
                 Console.WriteLine("4. Exit");
-                int optionChosen = Convert.ToInt32(Console.ReadLine());
+               
+                //Exception Handling for options
+                int optionChosen;
+                try
+                {
+                    optionChosen = Convert.ToInt32(Console.ReadLine());
+                }
+                catch (ArgumentOutOfRangeException e)
+                {
+                    optionChosen = 5;
+                }
 
                 decimal amount;
                 switch (optionChosen)
