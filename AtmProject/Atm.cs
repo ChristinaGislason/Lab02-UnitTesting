@@ -12,6 +12,10 @@ namespace Lab02_UnitTesting
             RunATM();
         }
 
+        /// <summary>
+        /// Displays ATM options to user and runs their selected choice to either view balance, deposit, withdraw, or exit. 
+        /// Asks user to choose if they want to continue with additional transactions.
+        /// </summary>
         public static void RunATM()
         {
             bool action = true;
@@ -73,11 +77,20 @@ namespace Lab02_UnitTesting
             }
         }
 
+        /// <summary>
+        /// Returns the Balance
+        /// </summary>
+        /// <returns></returns>
         public static decimal ViewBalance()
         {
             return Balance;
         }
 
+        /// <summary>
+        /// Adds input amount to Balance
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
         public static bool Deposit(decimal amount)
         {
             // only deposit if amount is positive
@@ -89,6 +102,11 @@ namespace Lab02_UnitTesting
             return false;
         }
 
+        /// <summary>
+        /// Deducts withdrawal amount from Balance
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
         public static bool Withdraw(decimal amount)
         {
             // only withdraw amount if it results in 
@@ -101,7 +119,10 @@ namespace Lab02_UnitTesting
             return false;
         }       
 
-        // add method to set the balance to anything
+        /// <summary>
+        /// Add method to set the balance to anything
+        /// </summary>
+        /// <param name="newBalance"></param>
         public static void UpdateBalance(decimal newBalance)
         {
             Balance = newBalance;
