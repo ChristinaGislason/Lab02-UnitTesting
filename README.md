@@ -6,8 +6,7 @@ Creates a bank “ATM” machine within a console application with VS2017
 
 # Visuals
 
-// TODO: Will insert when UI is complete
-
+![Lab02-UnitTesting-AtmCapture](Lab02-UnitTesting-AtmCapture.JPG)
 # How to use
 
 Download and build/run the program in Visual Studio. It should open a Console application. Use TDD to add new methods.
