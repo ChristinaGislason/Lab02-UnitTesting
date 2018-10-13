@@ -11,7 +11,7 @@ namespace Lab02_Unit_Testing
         public void CanReturnDefaultBalance()
         {
             // reset the balance to zero so other tests don't interfere
-            Program.updateBalance(0);
+            Program.UpdateBalance(0);
             Assert.Equal(0, Program.ViewBalance());
         }
 
@@ -20,8 +20,8 @@ namespace Lab02_Unit_Testing
         public void CanDepositMoney()
         {
             // reset the balance to zero so other tests don't interfere
-            Program.updateBalance(0);
-            Program.deposit(5);
+            Program.UpdateBalance(0);
+            Program.Deposit(5);
             Assert.Equal(5, Program.ViewBalance());
         }
 
@@ -30,8 +30,8 @@ namespace Lab02_Unit_Testing
         public void CannotDepositNegativeAmount()
         {
             // reset the balance to zero so other tests don't interfere
-            Program.updateBalance(0);
-            Program.deposit(-5);
+            Program.UpdateBalance(0);
+            Program.Deposit(-5);
             Assert.Equal(0, Program.ViewBalance());
         }
 
@@ -40,9 +40,9 @@ namespace Lab02_Unit_Testing
         public void CanWithdrawMoney()
         {
             // reset the balance to zero so other tests don't interfere
-            Program.updateBalance(0);
-            Program.deposit(5);
-            Program.withdraw(3);
+            Program.UpdateBalance(0);
+            Program.Deposit(5);
+            Program.Withdraw(3);
             Assert.Equal(2, Program.ViewBalance());
         }
 
@@ -51,9 +51,9 @@ namespace Lab02_Unit_Testing
         public void CannotWithdrawMoney()
         {
             // reset the balance to zero so other tests don't interfere
-            Program.updateBalance(0);
-            Program.deposit(5);
-            Program.withdraw(6);
+            Program.UpdateBalance(0);
+            Program.Deposit(5);
+            Program.Withdraw(6);
             Assert.Equal(5, Program.ViewBalance());
         }
     }
